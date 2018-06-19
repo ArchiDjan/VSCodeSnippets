@@ -1,0 +1,105 @@
+{
+	// Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"ArrayCount_XML": {
+		"prefix": "ArrayCount",
+		"body": [
+			"ArrayCount($1);"
+		],
+		"description": "Возвращает число элементов массива"
+	}
+
+	"ArrayMerge_XML": {
+		"prefix": "ArrayMerge",
+		"body": [
+			"ArrayMerge($1, $2, $3);"
+		],
+		"description": "Возвращает строку, полученную путем склеивания данных из элементов массива"
+	}
+
+	"ArrayOptFindByKey_XML": {
+		"prefix": "ArrayOptFindByKey",
+		"body": [
+			"ArrayOptFindByKey($1, $2);"
+		],
+		"description": "Ищет первый элемент массива с заданным значением определнного поля (ключа). Если такой элемент не найден, возвращается undefined.
+		array - массив
+     	keyValue - значение ключа (String).
+     	keyName - имя элемента, являющегося ключом (String). Необязательный аргумент. Если имя ключа не указано, используется первичный ключ."
+	}
+	
+	"ArraySelect_XML": {
+		"prefix": "ArraySelect",
+		"body": [
+			"ArraySelect($1, $2);"
+		],
+		"description": "Выбирает элементы массива, удовлетворяющие заданному критерию."
+	}
+
+	"ArraySelectAll_XML": {
+		"prefix": "ArraySelectAll",
+		"body": [
+			"ArraySelect($1);"
+		],
+		"description": "Возвращает массив, содержащий все элементы исходного массива в виде стандартного массива Array"
+	}
+
+	"ArraySelectByKey_XML": {
+		"prefix": "ArraySelectByKey",
+		"body": [
+			"ArraySelectByKey($1, $2, $3);"
+		],
+		"description": "Выбирает элементы массива, с определенным значением заданного поля (ключа) внутри элемента.
+		Функция аналогична более универсальной функции ArraySelect(), но работает быстрее."
+	}
+
+	"ArraySelectDistinct_XML": {
+		"prefix": "ArraySelectDistinct",
+		"body": [
+			"ArraySelectDistinct($1, $2);"
+		],
+		"description": "Возвращает массив уникальных значений элементов заданного массива."
+	}
+
+	
+	"ArraySort_XML": {
+		"prefix": "ArraySort",
+		"body": [
+			"ArraySort($1, $2);"
+		],
+		"description": "Сортирует массив по заданным полям. Возвращает новый массив отсортированных значений. 
+		Функция требует нечетного чилса аргументов (не менее 3-х), для каждого нового уровня сортировки добаляется 2 новых аргумента.
+		array   - массив
+		elemExprN   - выражение, вычисляющее значение полей относительно элемента массива, по которым осуществляется сортировка (String).
+		orderN   - направление сортировки ('+' или '-') (String). Не обязательный аргумент
+		Пример:
+     	ArraySort( array, 'name', '+', 'date', '-' )"
+	}
+
+	"ArrayUnion_XML": {
+		"prefix": "ArrayUnion",
+		"body": [
+			"ArrayUnion($1, $2);"
+		],
+		"description": "Последовательное объединение нескольких массивов в один."
+	}
+
+	"IsArray_XML": {
+		"prefix": "IsArray",
+		"body": [
+			"IsArray($1);"
+		],
+		"description": "Проверяет, является ли аргумент массивом. Результат bool"
+	}
+}
