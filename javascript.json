@@ -12,8 +12,17 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
+
+	"ArrayOptFirstElem_XML": {
+		"prefix": "ArrayOptFirstElem_XML",
+		"body": [
+			"ArrayOptFirstElem(XQuery(\"$1\"));"
+		],
+		"description": "Возвращает первый элемента массива"
+	}
+
 	"ArrayCount_XML": {
-		"prefix": "ArrayCount",
+		"prefix": "ArrayCount_XML",
 		"body": [
 			"ArrayCount($1);"
 		],
@@ -21,7 +30,7 @@
 	}
 
 	"ArrayMerge_XML": {
-		"prefix": "ArrayMerge",
+		"prefix": "ArrayMerge_XML",
 		"body": [
 			"ArrayMerge($1, $2, $3);"
 		],
@@ -29,7 +38,7 @@
 	}
 
 	"ArrayOptFindByKey_XML": {
-		"prefix": "ArrayOptFindByKey",
+		"prefix": "ArrayOptFindByKey_XML",
 		"body": [
 			"ArrayOptFindByKey($1, $2);"
 		],
@@ -40,7 +49,7 @@
 	}
 	
 	"ArraySelect_XML": {
-		"prefix": "ArraySelect",
+		"prefix": "ArraySelect_XML",
 		"body": [
 			"ArraySelect($1, $2);"
 		],
@@ -48,7 +57,7 @@
 	}
 
 	"ArraySelectAll_XML": {
-		"prefix": "ArraySelectAll",
+		"prefix": "ArraySelectAll_XML",
 		"body": [
 			"ArraySelect($1);"
 		],
@@ -56,7 +65,7 @@
 	}
 
 	"ArraySelectByKey_XML": {
-		"prefix": "ArraySelectByKey",
+		"prefix": "ArraySelectByKey_XML",
 		"body": [
 			"ArraySelectByKey($1, $2, $3);"
 		],
@@ -65,16 +74,15 @@
 	}
 
 	"ArraySelectDistinct_XML": {
-		"prefix": "ArraySelectDistinct",
+		"prefix": "ArraySelectDistinct_XML",
 		"body": [
 			"ArraySelectDistinct($1, $2);"
 		],
 		"description": "Возвращает массив уникальных значений элементов заданного массива."
 	}
 
-	
 	"ArraySort_XML": {
-		"prefix": "ArraySort",
+		"prefix": "ArraySort_XML",
 		"body": [
 			"ArraySort($1, $2);"
 		],
@@ -88,7 +96,7 @@
 	}
 
 	"ArrayUnion_XML": {
-		"prefix": "ArrayUnion",
+		"prefix": "ArrayUnion_XML",
 		"body": [
 			"ArrayUnion($1, $2);"
 		],
@@ -96,10 +104,187 @@
 	}
 
 	"IsArray_XML": {
-		"prefix": "IsArray",
+		"prefix": "IsArray_XML",
 		"body": [
 			"IsArray($1);"
 		],
 		"description": "Проверяет, является ли аргумент массивом. Результат bool"
 	}
+
+	"ArrayRange_XML": {
+		"prefix": "ArrayRange_XML",
+		"body": [
+			"ArrayRange($1, $2, $3);"
+		],
+		"description": "Возвращает фрагмент массива с определенной позиции.
+		array   - исходный массив
+    	 pos   - начальная позиция (Integer).
+     	elemsNum   - количество элементов нового массива (Integer). Необязательный аргумент. Если количестов не указано, возвращаются все элементы с начальной позиции."
+	}
+
+	"Date_XML": {
+		"prefix": "Date_XML",
+		"body": [
+			"Date($1);"
+		],
+		"Конструктор стандартного объекта JavaScript Date
+		date   - начальное значение даты (Date) либо строка, содержащее дату (String). 
+		Аргумент не является обязательным. Если аргумент не указан, объект инициализируется текущей датой."
+	}
+
+	"DateDiff_XML": {
+		"prefix": "DateDiff_XML",
+		"body": [
+			"DateDiff($1, $2);"
+		],
+		"Возвращает разницу между 2-мя датами в секундах. Если первая дата меньше второй, разница будет отрицательным числом."
+	}
+
+	"DateOffset_XML": {
+		"prefix": "DateOffset_XML",
+		"body": [
+			"DateOffset($1, $2);"
+		],
+		"Сдвигает дату на указанное число секунд. Если значение второго аргумента отрицательное, дата сдвигается назад.
+		date   - заданная дата (Date).
+	    seconds   - сдвиг в секундах (Integer)."
+	}
+
+	"Day_XML": {
+		"prefix": "Day_XML",
+		"body": [
+			"Day($1);"
+		],
+		" Возвращает значение дня (1-31) для заданной даты. - integer"
+	}
+	
+	"Hour_XML": {
+		"prefix": "Hour_XML",
+		"body": [
+			"Hour($1);"
+		],
+		"Возвращает значение часа для заданной даты - Integer. Если дата не содержит времени, возращается undefined."
+	}
+
+	"Minute_XML": {
+		"prefix": "Minute_XML",
+		"body": [
+			"Minute($1);"
+		],
+		"Возвращает значение минуты для заданной даты - Integer. Если дата не содержит времени, возращается undefined."
+	}
+
+	"Month_XML": {
+		"prefix": "Month_XML",
+		"body": [
+			"Month($1);"
+		],
+		"Возвращает номер месяца (1-12) для заданной даты - Integer"
+	}
+
+	"ParseDate_XML": {
+		"prefix": "ParseDate_XML",
+		"body": [
+			"ParseDate($1);"
+		],
+		"Преобразует строку с датой в большинсве изветных форматов в дату.
+		В отличие от функции Date() понимает дату со словесным указанием месяца, например '1 ноября 2011 года' Результат: Date
+		Аргументы:
+     	date   - строка с датой (String)."
+	}
+
+	"Second_XML": {
+		"prefix": "Second_XML",
+		"body": [
+			"Second($1);"
+		],
+		"Возвращает значение секунд для заданной даты. Если дата не содержит значения секунд, возращается undefined."
+	}
+
+	"StrDate_XML": {
+		"prefix": "StrDate_XML",
+		"body": [
+			"StrDate($1, $2);"
+		],
+		"Преобразует дату в строку в формате, используемом по умолчанию в операционной системе.
+		Если в качестве аргумента передается null или пустая строка, функция возвращает пустую строку.
+		date   - Объект даты (Date).
+		showTime   - Включать время (Bool). Необязательный аргумент.
+		showSeconds   - Включать секунды во времени (Bool). Необязательный аргумент.
+		Результат: String"
+	}
+
+	"StrLongDate_XML": {
+		"prefix": "StrLongDate_XML",
+		"body": [
+			"StrLongDate($1);"
+		],
+		"Преобразует дату в строку в "длинном" формате (со словесным написанием месяца).
+		Если в качестве аргумента передается null или пустая строка, функция возвращает пустую строку
+		Результат: String"
+	}
+
+	"StrShortDate_XML": {
+		"prefix": "StrShortDate_XML",
+		"body": [
+			"StrShortDate($1);"
+		],
+		"Преобразует дату в строку, с двухсимвольным форматом года.Результат: String"
+	}
+
+	"StrMimeDate_XML": {
+		"prefix": "StrMimeDate_XML",
+		"body": [
+			"StrMimeDate($1);"
+		],
+		"Пребразует дату в формат MIME. StrMimeDate( Date( '26.12.2011 10:45' ) ) вернет 'Mon, 26 Dec 2011 10:45:00 +0400' Результат: Date"
+	}
+
+	
+	"StrTime_XML": {
+		"prefix": "StrTime_XML",
+		"body": [
+			"StrTime($1);"
+		],
+		"Преобразует значение времени внутри даты в строку.
+		Если время не содержится внутри даты, возвращается пустая строка.Результат: String	
+		StrTime( Date( '26.12.2011 10:45' ) ) вернет '10:45' "
+	}
+
+	"StrXmlDate_XML": {
+		"prefix": "StrXmlDate_XML",
+		"body": [
+			"StrXmlDate($1, $2);"
+		],
+		"Преобразует дату в строку в формате, используемом в XML. Данный формат не зависит от региональных настроек в системе. 
+		Аргументы:
+		date   - Объект даты (Date).
+		showTime   - Включать время (Bool). Необязательный аргумент.
+		showSeconds   - Включать секунды во времени (Bool). Необязательный аргумент."
+	}	
+
+	"UtcToLocalDate_XML": {
+		"prefix": "UtcToLocalDate_XML",
+		"body": [
+			"UtcToLocalDate($1);"
+		],
+		"Преобразует дату из универсального часового пояса в текущий часовой пояс. Результат: Date"
+	}
+
+	"WeekDay_XML": {
+		"prefix": "WeekDay_XML",
+		"body": [
+			"WeekDay($1);"
+		],
+		"Возвращает номер дня недели для заданной даты. (0 - Воскресенье, 1 - Понедельник и т.д.) Результат: integer"
+	}
+
+	"Year_XML": {
+		"prefix": "Year_XML",
+		"body": [
+			"Year($1);"
+		],
+		"Возвращает значение года для заданной даты. Результат: integer"
+	}
+
 }
