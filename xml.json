@@ -18,6 +18,14 @@
 		"description": "Кнопка"
 	}
 
+	"CheckBox_XAML": {
+		"prefix": "CheckBox_XAML",
+		"body": [
+			"<CheckBox Name=\"$1\" Value=\"$2\" Checked=\"${3|True,False|}\" Enabled=\"${4|True,False|}\">$5</CheckBox>"
+		],
+		"description": "Галочка"
+	}
+
 	"ComboBox_XAML": {
 		"prefix": "ComboBox_XAML",
 		"body": [
