@@ -1,5 +1,6 @@
 {
-	// }
+	"Action_XAML": {
+		"prefix": "Action_XAML",
 		"body": [
 			"<Action Name=\"$1\" Source=\"$2\" Success=\"$3\" Failure=\"$4\">"
 				"\t<Param Name=\"$5\" Value=\"$6\"/>
