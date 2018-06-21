@@ -1,33 +1,48 @@
 {
-	// Place your snippets for xml here. Each snippet is defined under a snippet name and has a prefix, body and 
-	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
-	// same ids are connected.
-	// Example:
-	// "Print to console": {
-	// 	"prefix": "log",
-	// 	"body": [
-	// 		"console.log('$1');",
-	// 		"$2"
-	// 	],
-	// 	"description": "Log output to console"
 	// }
-	"Edit_XAML": {
-		"prefix": "Edit_XAML",
 		"body": [
-			"<Edit Name=\"$1\" Width=\"100%\" Enabled=\"${2|True,False|}\" Hidden=\"${3|False,True|}\">$4</Edit>"
+			"<Action Name=\"$1\" Source=\"$2\" Success=\"$3\" Failure=\"$4\">"
+				"\t<Param Name=\"$5\" Value=\"$6\"/>
+				"\t<Param Name=\"$7\" Value=\"$8\"/>
+			"</Action>"
 		],
-		"description": "Элемент для ввода текста"
+		"description": "Описание вызываемого действия"
 	}
 
-	"EditBox_XAML": {
-		"prefix": "EditBox_XAML",
+	"Button_XAML": {
+		"prefix": "Button_XAML",
 		"body": [
-			"<EditBox Name=\"$1\" Width=\"100%\" Height=\"50\" Enabled=\"${2|True,False|}\">"
-				"\t$3"
-			"</EditBox>"
+			"<Button Click=\"$1\" Width=\"100%\" Enabled=\"${2|True,False|}\">$3</Button>"
 		],
-		"description": "Элемент для ввода многострочного текста"
+		"description": "Кнопка"
+	}
+
+	"ComboBox_XAML": {
+		"prefix": "ComboBox_XAML",
+		"body": [
+			"<ComboBox Name=\"$1\" Width=\"100%\" Enabled=\"${2|True,False|}\">"
+				"\t<ComboBoxItem Value=\"$3\">$4</ComboBoxItem>"
+			"</ComboBox>"
+		],
+		"description": "Раскрывающийся список"
+	}
+
+	"ComboBoxItem_XAML": {
+		"prefix": "ComboBoxItem_XAML",
+		"body": [
+			"<ComboBoxItem Value=\"$1\">$2</ComboBoxItem>"
+		],
+		"description": "Элемент списка"
+	}
+
+	"DataGrid_XAML": {
+		"prefix": "DataGrid_XAML",
+		"body": [
+			"<DataGrid Name=\"$1\" Title=\"$2\" Source=\"$3\" Width=\"200\" Height=\"200\" Selection=\"${4|single,multiple,none|s}\" Hidden=\"${5|False,True|}\">"
+				"\t<DataGridColumn Title=\"$6\" Value=\"$7\" Type=\"$8\" Width=\"200\" Hidden=\"${9|False,True|}\"/>"
+			"</DataGrid>"
+		],
+		"description": "Таблица данных. Использует в качестве данных подгрузку из удаленных выборок"
 	}
 
 	"DatePicker_XAML": {
@@ -49,23 +64,59 @@
 		"description": "Описывает вызваемый диалог и все его параметры, также события на закрытие. Содержит параметры Param для передачи данных в XAML диалога в переменную PARAMETERS"
 	}
 
-	"StackPanel_XAML": {
-		"prefix": "StackPanel_XAML",
+	"Edit_XAML": {
+		"prefix": "Edit_XAML",
 		"body": [
-			"<StackPanel Name=\"$1\" Width=\"100%\" Height=\"50\" Hidden=\"${2|False,True|}\" Align=\"${3|left,center,right|}\" Orientation=\"${4|Horizontal,Vertical|}\">"
-				"\t$5"
-			"</StackPanel>"
+			"<Edit Name=\"$1\" Width=\"100%\" Enabled=\"${2|True,False|}\" Hidden=\"${3|False,True|}\">$4</Edit>"
 		],
-		"description": "Контейнер. NB: Горизонтальная ориентация будет стараться ужать содержимое до минимальной ширины. Если у дочернего элемента ширина не указана/указана в процентах, контейнер сожмет её максимально узко
-		"
+		"description": "Элемент для ввода текста"
 	}
 
-	"XQuery_SPXML": {
-		"prefix": "XQuery_XAML",
+	"EditBox_XAML": {
+		"prefix": "EditBox_XAML",
 		"body": [
-			"XQuery(\"for \\$elem in $1 return \\$elem\");"
+			"<EditBox Name=\"$1\" Width=\"100%\" Height=\"50\" Enabled=\"${2|True,False|}\">"
+				"\t$3"
+			"</EditBox>"
 		],
-		"description": "Простой XQuery-запрос"
+		"description": "Элемент для ввода многострочного текста"
+	}
+	
+	"Grid_XAML": {
+		"prefix": "Grid_XAML",
+		"body": [
+			"<Grid Width=\"100%\" Hidden=\"${1|False,True|}\">"
+				"\t<GridColumns>"
+					"\t\t<GridColumn Width=\"200\"/>"
+					"\t\t<GridColumn Width=\"300\"/>"
+				"\t</GridColumns>"
+				"\t<GridRow>"
+					"\t\t<Label Width=\"200\" Align=\"${2|left,center,right|}\">$3</Label>"
+					"\t\t<Label Width=\"200\" Align=\"${4|left,center,right|}\">$5</Label>"
+				"\t</GridRow>"
+				"\t<GridRow>"
+					"\t\t<Label Width=\"200\" Align=\"${6|left,center,right|}\">$7</Label>"
+					"\t\t<Label Width=\"200\" Align=\"${8|left,center,right|}\">$9</Label>"
+				"\t</GridRow>"
+			"</Grid>"
+		],
+		"description": "Табличная компоновка"
+	}
+
+	"Label_XAML": {
+		"prefix": "Label_XAML",
+		"body": [
+			"<Label>$1</Label>"
+		],
+		"description": "Текст на форме"
+	}
+
+	"Link_XAML": {
+		"prefix": "Link_XAML",
+		"body": [
+			"<Link Click=\"$1\">$2</Link>"
+		],
+		"description": "Гиперссылка"
 	}
 
 	"SPXMLScreen_XAML": {
@@ -78,45 +129,34 @@
 		"description": "Корневой элемент формы, является начальным контейнером. NB: если объявлен внутри другого SPXMLScreen'а, то превращается в StackPanel с параметрами по умолчанию."
 	}
 
-	"Action_XAML": {
-		"prefix": "Action_XAML",
+	"StackPanel_XAML": {
+		"prefix": "StackPanel_XAML",
 		"body": [
-			"<Action Name=\"$1\" Source=\"$2\" Success=\"$3\" Failure=\"$4\">"
-				"\t<Param Name=\"$5\" Value=\"$6\"/>
-				"\t<Param Name=\"$7\" Value=\"$8\"/>
-			"</Action>"
+			"<StackPanel Name=\"$1\" Width=\"100%\" Height=\"50\" Hidden=\"${2|False,True|}\" Align=\"${3|left,center,right|}\" Orientation=\"${4|Horizontal,Vertical|}\">"
+				"\t$5"
+			"</StackPanel>"
 		],
-		"description": "Описание вызываемого действия"
+		"description": "Контейнер. NB: Горизонтальная ориентация будет стараться ужать содержимое до минимальной ширины. Если у дочернего элемента ширина не указана/указана в процентах, контейнер сожмет её максимально узко
+		"
+	}	
+
+	"XQuery_SPXML": {
+		"prefix": "XQuery_SPXML",
+		"body": [
+			"XQuery(\"for \\$elem in $1 return \\$elem\");"
+		],
+		"description": "Простой XQuery-запрос"
 	}
 
-	"Button_XAML": {
-		"prefix": "Button_XAML",
-		"body": [
-			"<Button Click=\"$1\" Width=\"100%\" Enabled=\"${2|True,False|}\">$3</Button>"
-		],
-		"description": "Кнопка"
-	}
 
-	"Grid_XAML": {
-		"prefix": "Grid_XAML",
-		"body": [
-			"<Grid Width=\"100%\" Hidden=\"${1|False,True|}\">"
-				"\t<GridColumns>"
-					"\t\t<GridColumn Width=\"200\"/>"
-					"\t\t<GridColumn Width=\"300\"/>"
-				"\t</GridColumns>"
-				"\t<GridRow>"
-					"\t\t<Label>$2</Label>"
-					"\t\t<Label>$3</Label>"
-				"\t</GridRow>"
-				"\t<GridRow>"
-					"\t\t<Label>$4</Label>"
-					"\t\t<Label>$5</Label>"
-				"\t</GridRow>"
-			"</Grid>"
-		],
-		"description": "Табличная компоновка"
-	}
+
+	
+
+
+
+	
+
+
 
 
 
