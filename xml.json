@@ -3,8 +3,8 @@
 		"prefix": "Action_XAML",
 		"body": [
 			"<Action Name=\"$1\" Source=\"$2\" Success=\"$3\" Failure=\"$4\">"
-				"\t<Param Name=\"$5\" Value=\"$6\"/>
-				"\t<Param Name=\"$7\" Value=\"$8\"/>
+				"\t<Param Name=\"$5\" Value=\"$6\"/>"
+				"\t<Param Name=\"$7\" Value=\"$8\"/>"
 			"</Action>"
 		],
 		"description": "Описание вызываемого действия"
@@ -24,6 +24,17 @@
 			"<CheckBox Name=\"$1\" Value=\"$2\" Checked=\"${3|True,False|}\" Enabled=\"${4|True,False|}\">$5</CheckBox>"
 		],
 		"description": "Галочка"
+	}
+
+	"Collection_XAML": {
+		"prefix": "Collection_XAML",
+		"body": [
+			"<Collection Name=\"$1\" Source=\"$2\">"
+				"\t<Param Name=\"$3\" Value=\"$4\"/>"
+				"\t<Param Name=\"$5\" Value=\"$6\"/>"
+			"</Collection>"
+		],
+		"description": "Описание удаленной выборки"
 	}
 
 	"ComboBox_XAML": {
@@ -52,6 +63,14 @@
 			"</DataGrid>"
 		],
 		"description": "Таблица данных. Использует в качестве данных подгрузку из удаленных выборок"
+	}
+
+	"DataGridColumn_XAML": {
+		"prefix": "DataGridColumn_XAML",
+		"body": [
+			"<DataGridColumn Title=\"$1\" Value=\"$2\" Type=\"$3\" Width=\"100%\" Hidden=\"${4|False,True|}\"/>"
+		],
+		"description": "Описание столбца таблицы DataGrid"
 	}
 
 	"DatePicker_XAML": {
