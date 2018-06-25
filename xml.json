@@ -18,6 +18,14 @@
 		"description": "Кнопка"
 	}
 
+	"Calendar_XAML": {
+		"prefix": "Calendar_XAML",
+		"body": [
+			"<Calendar Name=\"$1\" Source=\"$2\" Width=\"100\" Height=\"100\" Modes=\"${3|Day,Week,Month,Monthcategory,Category|}\" SelectedView=\"${4|Day,Week,Month,Monthcategory,Category|}\"/>
+		],
+		"description": "Календарь"
+	}
+
 	"CheckBox_XAML": {
 		"prefix": "CheckBox_XAML",
 		"body": [
@@ -53,6 +61,22 @@
 			"<ComboBoxItem Value=\"$1\">$2</ComboBoxItem>"
 		],
 		"description": "Элемент списка"
+	}
+
+	"Data_XAML": {
+		"prefix": "Data_XAML",
+		"body": [
+			"<Data>"
+				"\t<Row>"
+					"\t\t<Cell Id=\"$1\" Value=\"$2\"/>"
+				"\t</Row>"
+				"\t<Row>"
+					"\t\t<Cell Id=\"$3\" Value=\"$4\"/>"
+				"\t</Row>"
+			"</Data>"
+	
+		],
+		"description": "Набор статических данных для дерева или таблицы"
 	}
 
 	"DataGrid_XAML": {
