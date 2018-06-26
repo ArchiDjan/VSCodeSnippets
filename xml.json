@@ -182,7 +182,7 @@
 	"Panel_XAML": {
 		"prefix": "Panel_XAML",
 		"body": [
-			"<Panel Name=\"$1\" Title=\"$2\" Source=\"$3\" Hidden=\"${4|False,True|}\"/>"
+			"<Panel Name=\"$1\" Title=\"$2\" Source=\"$3\" Hidden=\"${4|False,True|}\">"
 				"\t$5"
 			"</Panel>"
 		],
