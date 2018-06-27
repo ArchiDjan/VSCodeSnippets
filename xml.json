@@ -197,6 +197,24 @@
 		"description": "Параметр вызываемого удаленного действия."
 	}
 
+	"RadioButton_XAML": {
+		"prefix": "RadioButton_XAML",
+		"body": [
+			"<RadioButton Name=\"$1\" Value=\"$2\" Checked=\"${3|False,True|}\"/>$4</RadioButton>"
+		],
+		"description": "Селектор-радиокнопка"
+	}
+
+	"Toolbar_XAML": {
+		"prefix": "Toolbar_XAML",
+		"body": [
+			"<Toolbar Width=\"100%\">
+				"\t$1"			
+			"</Toolbar>"
+		],
+		"description": "Панель с кнопочками. Содержать может: кнопки, расхлопывающиеся списки"
+	}
+
 	"SPXMLScreen_XAML": {
 		"prefix": "SPXMLScreen_XAML",
 		"body": [
