@@ -13,6 +13,16 @@
 	// 	"description": "Log output to console"
 	// }
 
+	"OpenDoc_XML": {
+		"prefix": "OpenDoc_XML",
+		"body": [
+			"OpenDoc(UrlFromDocID($1));"
+		],
+		"description": "Аргументы: url   - url документа (String).
+		options   - опции открытия документа в виде "param1='value1';param2='value2';..." (String). Необязательный аргумент. См. Опции открытия документа XML
+   		Результат: Объект XmlDoc"
+	}
+
 	"ArrayOptFirstElem_XML": {
 		"prefix": "ArrayOptFirstElem_XML",
 		"body": [
@@ -285,6 +295,94 @@
 			"Year($1);"
 		],
 		"Возвращает значение года для заданной даты. Результат: integer"
+	}
+
+	"StrBegins_XML": {
+		"prefix": "StrBegins_XML",
+		"body": [
+			"StrBegins($1, $2);"
+		],
+		"Проверяет, начинается ли строка на другую строку. StrBegins(str, subStr, ignoreCase)
+		Аргументы:
+		str   - строка, в которой ищут (String).
+		subStr   - подстрока, которую ищут (String).
+		ignoreCase   - не учитывать регистр (Bool). Необязательный аргумент.
+		Результат: Bool"
+	}
+
+	"StrCharCount_XML": {
+		"prefix": "StrCharCount_XML",
+		"body": [
+			"StrCharCount($1);"
+		],
+		"ВВозвращает количество символов в строке. Результат: integer"
+	}
+
+	"StrContains_XML": {
+		"prefix": "StrContains_XML",
+		"body": [
+			"StrContains($1);"
+		],
+		"Проверяет, содержит ли строка другую строку в качестве подстроки.
+		Аргументы: StrContains(str, subStr, ignoreCase) 
+		str   - строка, в которой ищут (String).
+		subStr   - подстрока, которую ищут (String).
+		ignoreCase   - не учитывать регистр (Bool). Не обязательный аргумент.
+		Результат: Bool"
+	}
+
+	"StrEnds_XML": {
+		"prefix": "StrEnds_XML",
+		"body": [
+			"StrEnds($1, $2);"
+		],
+		"Проверяет, оканчивается ли строка на другую строку.  StrEnds(str, subStr, ignoreCase) 
+		Аргументы:
+		str   - строка, в которой ищут (String).
+		subStr   - подстрока, которую ищут (String).
+		ignoreCase   - не учитывать регистр (Bool). Не обязательный аргумент. Результат: Bool"
+	}
+
+	"StrIsAlphaNum_XML": {
+		"prefix": "StrIsAlphaNum_XML",
+		"body": [
+			"StrIsAlphaNum($1);"
+		],
+		"Проверяет состоит ли строка только из цифр или латинских символов.
+		Аргументы: str   - проверяемая строка (String).
+		Результат: Bool"
+	}
+
+	"StrLeftRange_XML": {
+		"prefix": "StrLeftRange_XML",
+		"body": [
+			"StrLeftRange($1);"
+		],
+		"Возвращает часть строки str, длиной length, начиная с первого символа переданной строки.
+		Если второй аргумент больше длины передаваемой строки, возвращается str. StrLeftRange(str, length)
+		Аргументы:
+		str   - строка (String).
+		length   - длина строки (Integer).
+		Результат: String"
+	}
+
+	"StrLen_XML": {
+		"prefix": "StrLen_XML",
+		"body": [
+			"StrLen($1);"
+		],
+		"Возвращает длину строки в байтах.
+		Данная длина может быть больше количества символов, если приложение использует кодировку UTF-8. Результат: Integer"
+	}	
+
+	"StrLowerCase_XML": {
+		"prefix": "StrLowerCase_XML",
+		"body": [
+			"StrLowerCase($1);"
+		],
+		"Переводит все символы строки в нижний регистр.
+		Аргументы: str   - строка, которую необходимо преобразовать (String).
+		Результат: String"
 	}
 
 }
