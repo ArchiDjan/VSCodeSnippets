@@ -1,0 +1,716 @@
+{
+	// ********************************************************* НАЧАЛО СНИППЕТОВ XAML *********************************************************
+	"Action_XAML": {
+		"scope": "javascript,xml",
+		"prefix": "Action_XAML",
+		"body": [
+			"<Action Name=\"$1\" Source=\"$2\" Success=\"$3\" Failure=\"$4\">"
+				"\t<Param Name=\"$5\" Value=\"$6\"/>"
+				"\t<Param Name=\"$7\" Value=\"$8\"/>"
+			"</Action>"
+		],
+		"description": "Описание вызываемого действия"
+	}
+
+	"Button_XAML": {
+		"scope": "javascript,xml",
+		"prefix": "Button_XAML",
+		"body": [
+			"<Button Click=\"$1\" Width=\"100%\" Enabled=\"${2|True,False|}\">$3</Button>"
+		],
+		"description": "Кнопка"
+	}
+
+	"Calendar_XAML": {
+		"scope": "javascript,xml",
+		"prefix": "Calendar_XAML",
+		"body": [
+			"<Calendar Name=\"$1\" Source=\"$2\" Width=\"100\" Height=\"100\" Modes=\"${3|Day,Week,Month,Monthcategory,Category|}\" SelectedView=\"${4|Day,Week,Month,Monthcategory,Category|}\"/>
+		],
+		"description": "Календарь"
+	}
+
+	"CheckBox_XAML": {
+		"scope": "javascript,xml",
+		"prefix": "CheckBox_XAML",
+		"body": [
+			"<CheckBox Name=\"$1\" Value=\"$2\" Checked=\"${3|True,False|}\" Enabled=\"${4|True,False|}\">$5</CheckBox>"
+		],
+		"description": "Галочка"
+	}
+
+	"Collection_XAML": {
+		"scope": "javascript,xml",
+		"prefix": "Collection_XAML",
+		"body": [
+			"<Collection Name=\"$1\" Source=\"$2\">"
+				"\t<Param Name=\"$3\" Value=\"$4\"/>"
+				"\t<Param Name=\"$5\" Value=\"$6\"/>"
+			"</Collection>"
+		],
+		"description": "Описание удаленной выборки"
+	}
+
+	"ComboBox_XAML": {
+		"scope": "javascript,xml",
+		"prefix": "ComboBox_XAML",
+		"body": [
+			"<ComboBox Name=\"$1\" Width=\"100%\" Enabled=\"${2|True,False|}\">"
+				"\t<ComboBoxItem Value=\"$3\">$4</ComboBoxItem>"
+			"</ComboBox>"
+		],
+		"description": "Раскрывающийся список"
+	}
+
+	"ComboBoxItem_XAML": {
+		"scope": "javascript,xml",
+		"prefix": "ComboBoxItem_XAML",
+		"body": [
+			"<ComboBoxItem Value=\"$1\">$2</ComboBoxItem>"
+		],
+		"description": "Элемент списка"
+	}
+
+	"Data_XAML": {
+		"scope": "javascript,xml",
+		"prefix": "Data_XAML",
+		"body": [
+			"<Data>"
+				"\t<Row>"
+					"\t\t<Cell Id=\"$1\" Value=\"$2\"/>"
+				"\t</Row>"
+				"\t<Row>"
+					"\t\t<Cell Id=\"$3\" Value=\"$4\"/>"
+				"\t</Row>"
+			"</Data>"
+	
+		],
+		"description": "Набор статических данных для дерева или таблицы"
+	}
+
+	"DataGrid_XAML": {
+		"scope": "javascript,xml",
+		"prefix": "DataGrid_XAML",
+		"body": [
+			"<DataGrid Name=\"$1\" Title=\"$2\" Source=\"$3\" Width=\"200\" Height=\"200\" Selection=\"${4|single,multiple,none|s}\" Hidden=\"${5|False,True|}\">"
+				"\t<DataGridColumn Title=\"$6\" Value=\"$7\" Type=\"$8\" Width=\"200\" Hidden=\"${9|False,True|}\"/>"
+			"</DataGrid>"
+		],
+		"description": "Таблица данных. Использует в качестве данных подгрузку из удаленных выборок"
+	}
+
+	"DataGridColumn_XAML": {
+		"scope": "javascript,xml",
+		"prefix": "DataGridColumn_XAML",
+		"body": [
+			"<DataGridColumn Title=\"$1\" Value=\"$2\" Type=\"$3\" Width=\"100%\" Hidden=\"${4|False,True|}\"/>"
+		],
+		"description": "Описание столбца таблицы DataGrid"
+	}
+
+	"DatePicker_XAML": {
+		"scope": "javascript,xml",
+		"prefix": "DatePicker_XAML",
+		"body": [
+			"<DatePicker Name=\"$1\" Width=\"100%\" Enabled=\"${2|True,False|}\">$4</DatePicker>"
+		],
+		"description": "Элемент для выбора даты"
+	}
+
+	
+	"Dialog_XAML": {
+		"scope": "javascript,xml",
+		"prefix": "Dialog_XAML",
+		"body": [
+			"<Dialog Name=\"$1\" Title=\"$2\" Width=\"100%\" Height=\"50\" Source=\"$3\" Close=\"$4\">"
+				"\t<Param Name=\"$5\" Value=\"Добро пожаловать в диалог!\"/>"
+			"</Dialog>"
+		],
+		"description": "Описывает вызваемый диалог и все его параметры, также события на закрытие. Содержит параметры Param для передачи данных в XAML диалога в переменную PARAMETERS"
+	}
+
+	"Edit_XAML": {
+		"scope": "javascript,xml",
+		"prefix": "Edit_XAML",
+		"body": [
+			"<Edit Name=\"$1\" Width=\"100%\" Enabled=\"${2|True,False|}\" Hidden=\"${3|False,True|}\">$4</Edit>"
+		],
+		"description": "Элемент для ввода текста"
+	}
+
+	"EditBox_XAML": {
+		"scope": "javascript,xml",
+		"prefix": "EditBox_XAML",
+		"body": [
+			"<EditBox Name=\"$1\" Width=\"100%\" Height=\"50\" Enabled=\"${2|True,False|}\">"
+				"\t$3"
+			"</EditBox>"
+		],
+		"description": "Элемент для ввода многострочного текста"
+	}
+	
+	"Grid_XAML": {
+		"scope": "javascript,xml",
+		"prefix": "Grid_XAML",
+		"body": [
+			"<Grid Width=\"100%\" Hidden=\"${1|False,True|}\">"
+				"\t<GridColumns>"
+					"\t\t<GridColumn Width=\"200\"/>"
+					"\t\t<GridColumn Width=\"300\"/>"
+				"\t</GridColumns>"
+				"\t<GridRow>"
+					"\t\t<Label Width=\"200\" Align=\"${2|left,center,right|}\">$3</Label>"
+					"\t\t<Label Width=\"200\" Align=\"${4|left,center,right|}\">$5</Label>"
+				"\t</GridRow>"
+				"\t<GridRow>"
+					"\t\t<Label Width=\"200\" Align=\"${6|left,center,right|}\">$7</Label>"
+					"\t\t<Label Width=\"200\" Align=\"${8|left,center,right|}\">$9</Label>"
+				"\t</GridRow>"
+			"</Grid>"
+		],
+		"description": "Табличная компоновка"
+	}
+
+	"Image_XAML": {
+		"scope": "javascript,xml",
+		"prefix": "Image_XAML",
+		"body": [
+			"<Image Source=\"$1\" Width=\"100%\" Height=\"50\" Class=\"$2\" Click=\"$3\">"
+		],
+		"description": "Картинка"
+	}
+
+	"Label_XAML": {
+		"scope": "javascript,xml",
+		"prefix": "Label_XAML",
+		"body": [
+			"<Label>$1</Label>"
+		],
+		"description": "Текст на форме"
+	}
+
+	"Link_XAML": {
+		"scope": "javascript,xml",
+		"prefix": "Link_XAML",
+		"body": [
+			"<Link Click=\"$1\">$2</Link>"
+		],
+		"description": "Гиперссылка"
+	}
+
+	"Panel_XAML": {
+		"scope": "javascript,xml",
+		"prefix": "Panel_XAML",
+		"body": [
+			"<Panel Name=\"$1\" Title=\"$2\" Source=\"$3\" Hidden=\"${4|False,True|}\">"
+				"\t$5"
+			"</Panel>"
+		],
+		"description": "Асинхронно раскрывающийся блок"
+	}
+
+	"Param_XAML": {
+		"scope": "javascript,xml",
+		"prefix": "Param_XAML",
+		"body": [
+			"<Param Name=\"$1\" Value=\"$2\"/>"
+		],
+		"description": "Параметр вызываемого удаленного действия."
+	}
+
+	"RadioButton_XAML": {
+		"scope": "javascript,xml",
+		"prefix": "RadioButton_XAML",
+		"body": [
+			"<RadioButton Name=\"$1\" Value=\"$2\" Checked=\"${3|False,True|}\"/>$4</RadioButton>"
+		],
+		"description": "Селектор-радиокнопка"
+	}
+
+	"Toolbar_XAML": {
+		"scope": "javascript,xml",
+		"prefix": "Toolbar_XAML",
+		"body": [
+			"<Toolbar Width=\"100%\">
+				"\t$1"			
+			"</Toolbar>"
+		],
+		"description": "Панель с кнопочками. Содержать может: кнопки, расхлопывающиеся списки"
+	}
+
+	"SPXMLScreen_XAML": {
+		"scope": "javascript,xml",
+		"prefix": "SPXMLScreen_XAML",
+		"body": [
+			"<SPXMLScreen Name=\"$1\" Title=\"$2\" Width=\"100%\" Height=\"100%\" Maximized=\"${3|False,True|}\">"
+				"\t$4"
+			"</SPXMLScreen>"
+		],
+		"description": "Корневой элемент формы, является начальным контейнером. NB: если объявлен внутри другого SPXMLScreen'а, то превращается в StackPanel с параметрами по умолчанию."
+	}
+
+	"StackPanel_XAML": {
+		"scope": "javascript,xml",
+		"prefix": "StackPanel_XAML",
+		"body": [
+			"<StackPanel Name=\"$1\" Width=\"100%\" Height=\"50\" Hidden=\"${2|False,True|}\" Align=\"${3|left,center,right|}\" Orientation=\"${4|Horizontal,Vertical|}\">"
+				"\t$5"
+			"</StackPanel>"
+		],
+		"description": "Контейнер. NB: Горизонтальная ориентация будет стараться ужать содержимое до минимальной ширины. Если у дочернего элемента ширина не указана/указана в процентах, контейнер сожмет её максимально узко
+		"
+	}
+
+	
+
+
+// ********************************************************* НАЧАЛО СНИППЕТОВ SPXML *********************************************************
+
+	"ArrayOptFirstElem_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "ArrayOptFirstElem_SPXML",
+		"body": [
+			"ArrayOptFirstElem(XQuery(\"$1\"));"
+		],
+		"description": "Возвращает первый элемента массива"
+	}
+
+	"ArrayCount_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "ArrayCount_SPXML",
+		"body": [
+			"ArrayCount($1);"
+		],
+		"description": "Возвращает число элементов массива"
+	}
+
+	"OpenDoc_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "OpenDoc_SPXML",
+		"body": [
+			"OpenDoc(UrlFromDocID($1));"
+		],
+		"description": "Аргументы: url   - url документа (String).
+		options   - опции открытия документа в виде "param1='value1';param2='value2';..." (String). Необязательный аргумент. См. Опции открытия документа XML
+   		Результат: Объект XmlDoc"
+	}
+
+
+	"ArrayMerge_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "ArrayMerge_SPXML",
+		"body": [
+			"ArrayMerge($1, $2, $3);"
+		],
+		"description": "Возвращает строку, полученную путем склеивания данных из элементов массива"
+	}
+
+	"ArrayOptFindByKey_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "ArrayOptFindByKey_SPXML",
+		"body": [
+			"ArrayOptFindByKey($1, $2);"
+		],
+		"description": "Ищет первый элемент массива с заданным значением определнного поля (ключа). Если такой элемент не найден, возвращается undefined.
+		array - массив
+     	keyValue - значение ключа (String).
+     	keyName - имя элемента, являющегося ключом (String). Необязательный аргумент. Если имя ключа не указано, используется первичный ключ."
+	}
+	
+	"ArraySelect_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "ArraySelect_SPXML",
+		"body": [
+			"ArraySelect($1, $2);"
+		],
+		"description": "Выбирает элементы массива, удовлетворяющие заданному критерию."
+	}
+
+	"ArraySelectAll_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "ArraySelectAll_SPXML",
+		"body": [
+			"ArraySelect($1);"
+		],
+		"description": "Возвращает массив, содержащий все элементы исходного массива в виде стандартного массива Array"
+	}
+
+	"ArraySelectByKey_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "ArraySelectByKey_SPXML",
+		"body": [
+			"ArraySelectByKey($1, $2, $3);"
+		],
+		"description": "Выбирает элементы массива, с определенным значением заданного поля (ключа) внутри элемента.
+		Функция аналогична более универсальной функции ArraySelect(), но работает быстрее."
+	}
+
+	"ArraySelectDistinct_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "ArraySelectDistinct_SPXML",
+		"body": [
+			"ArraySelectDistinct($1, $2);"
+		],
+		"description": "Возвращает массив уникальных значений элементов заданного массива."
+	}
+
+	"ArraySort_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "ArraySort_SPXML",
+		"body": [
+			"ArraySort($1, $2);"
+		],
+		"description": "Сортирует массив по заданным полям. Возвращает новый массив отсортированных значений. 
+		Функция требует нечетного чилса аргументов (не менее 3-х), для каждого нового уровня сортировки добаляется 2 новых аргумента.
+		array   - массив
+		elemExprN   - выражение, вычисляющее значение полей относительно элемента массива, по которым осуществляется сортировка (String).
+		orderN   - направление сортировки ('+' или '-') (String). Не обязательный аргумент
+		Пример:
+     	ArraySort( array, 'name', '+', 'date', '-' )"
+	}
+
+	"ArrayUnion_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "ArrayUnion_SPXML",
+		"body": [
+			"ArrayUnion($1, $2);"
+		],
+		"description": "Последовательное объединение нескольких массивов в один."
+	}
+
+	"IsArray_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "IsArray_SPXML",
+		"body": [
+			"IsArray($1);"
+		],
+		"description": "Проверяет, является ли аргумент массивом. Результат bool"
+	}
+
+	"ArrayRange_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "ArrayRange_SPXML",
+		"body": [
+			"ArrayRange($1, $2, $3);"
+		],
+		"description": "Возвращает фрагмент массива с определенной позиции.
+		array   - исходный массив
+    	 pos   - начальная позиция (Integer).
+     	elemsNum   - количество элементов нового массива (Integer). Необязательный аргумент. Если количестов не указано, возвращаются все элементы с начальной позиции."
+	}
+
+	"Date_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "Date_SPXML",
+		"body": [
+			"Date($1);"
+		],
+		"Конструктор стандартного объекта JavaScript Date
+		date   - начальное значение даты (Date) либо строка, содержащее дату (String). 
+		Аргумент не является обязательным. Если аргумент не указан, объект инициализируется текущей датой."
+	}
+
+	"DateDiff_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "DateDiff_SPXML",
+		"body": [
+			"DateDiff($1, $2);"
+		],
+		"Возвращает разницу между 2-мя датами в секундах. Если первая дата меньше второй, разница будет отрицательным числом."
+	}
+
+	"DateOffset_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "DateOffset_SPXML",
+		"body": [
+			"DateOffset($1, $2);"
+		],
+		"Сдвигает дату на указанное число секунд. Если значение второго аргумента отрицательное, дата сдвигается назад.
+		date   - заданная дата (Date).
+	    seconds   - сдвиг в секундах (Integer)."
+	}
+
+	"Day_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "Day_SPXML",
+		"body": [
+			"Day($1);"
+		],
+		" Возвращает значение дня (1-31) для заданной даты. - integer"
+	}
+	
+	"Hour_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "Hour_SPXML",
+		"body": [
+			"Hour($1);"
+		],
+		"Возвращает значение часа для заданной даты - Integer. Если дата не содержит времени, возращается undefined."
+	}
+
+	"Minute_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "Minute_SPXML",
+		"body": [
+			"Minute($1);"
+		],
+		"Возвращает значение минуты для заданной даты - Integer. Если дата не содержит времени, возращается undefined."
+	}
+
+	"Month_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "Month_SPXML",
+		"body": [
+			"Month($1);"
+		],
+		"Возвращает номер месяца (1-12) для заданной даты - Integer"
+	}
+
+	"ParseDate_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "ParseDate_SPXML",
+		"body": [
+			"ParseDate($1);"
+		],
+		"Преобразует строку с датой в большинсве изветных форматов в дату.
+		В отличие от функции Date() понимает дату со словесным указанием месяца, например '1 ноября 2011 года' Результат: Date
+		Аргументы:
+     	date   - строка с датой (String)."
+	}
+
+	"Second_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "Second_SPXML",
+		"body": [
+			"Second($1);"
+		],
+		"Возвращает значение секунд для заданной даты. Если дата не содержит значения секунд, возращается undefined."
+	}
+
+	"StrDate_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "StrDate_SPXML",
+		"body": [
+			"StrDate($1, $2);"
+		],
+		"Преобразует дату в строку в формате, используемом по умолчанию в операционной системе.
+		Если в качестве аргумента передается null или пустая строка, функция возвращает пустую строку.
+		date   - Объект даты (Date).
+		showTime   - Включать время (Bool). Необязательный аргумент.
+		showSeconds   - Включать секунды во времени (Bool). Необязательный аргумент.
+		Результат: String"
+	}
+
+	"StrLongDate_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "StrLongDate_SPXML",
+		"body": [
+			"StrLongDate($1);"
+		],
+		"Преобразует дату в строку в "длинном" формате (со словесным написанием месяца).
+		Если в качестве аргумента передается null или пустая строка, функция возвращает пустую строку
+		Результат: String"
+	}
+
+	"StrShortDate_SPXML": {
+		"prefix": "StrShortDate_SPXML",
+		"body": [
+			"StrShortDate($1);"
+		],
+		"Преобразует дату в строку, с двухсимвольным форматом года.Результат: String"
+	}
+
+	"StrMimeDate_SPXML": {
+		"prefix": "StrMimeDate_SPXML",
+		"body": [
+			"StrMimeDate($1);"
+		],
+		"Пребразует дату в формат MIME. StrMimeDate( Date( '26.12.2011 10:45' ) ) вернет 'Mon, 26 Dec 2011 10:45:00 +0400' Результат: Date"
+	}
+
+	
+	"StrTime_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "StrTime_SPXML",
+		"body": [
+			"StrTime($1);"
+		],
+		"Преобразует значение времени внутри даты в строку.
+		Если время не содержится внутри даты, возвращается пустая строка.Результат: String	
+		StrTime( Date( '26.12.2011 10:45' ) ) вернет '10:45' "
+	}
+
+	"StrXmlDate_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "StrXmlDate_SPXML",
+		"body": [
+			"StrXmlDate($1, $2);"
+		],
+		"Преобразует дату в строку в формате, используемом в XML. Данный формат не зависит от региональных настроек в системе. 
+		Аргументы:
+		date   - Объект даты (Date).
+		showTime   - Включать время (Bool). Необязательный аргумент.
+		showSeconds   - Включать секунды во времени (Bool). Необязательный аргумент."
+	}	
+
+	"UtcToLocalDate_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "UtcToLocalDate_SPXML",
+		"body": [
+			"UtcToLocalDate($1);"
+		],
+		"Преобразует дату из универсального часового пояса в текущий часовой пояс. Результат: Date"
+	}
+
+	"WeekDay_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "WeekDay_SPXML",
+		"body": [
+			"WeekDay($1);"
+		],
+		"Возвращает номер дня недели для заданной даты. (0 - Воскресенье, 1 - Понедельник и т.д.) Результат: integer"
+	}
+
+	"Year_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "Year_SPXML",
+		"body": [
+			"Year($1);"
+		],
+		"Возвращает значение года для заданной даты. Результат: integer"
+	}
+
+	"StrBegins_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "StrBegins_SPXML",
+		"body": [
+			"StrBegins($1, $2);"
+		],
+		"Проверяет, начинается ли строка на другую строку. StrBegins(str, subStr, ignoreCase)
+		Аргументы:
+		str   - строка, в которой ищут (String).
+		subStr   - подстрока, которую ищут (String).
+		ignoreCase   - не учитывать регистр (Bool). Необязательный аргумент.
+		Результат: Bool"
+	}
+
+	"StrCharCount_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "StrCharCount_SPXML",
+		"body": [
+			"StrCharCount($1);"
+		],
+		"ВВозвращает количество символов в строке. Результат: integer"
+	}
+
+	"StrContains_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "StrContains_SPXML",
+		"body": [
+			"StrContains($1);"
+		],
+		"Проверяет, содержит ли строка другую строку в качестве подстроки.
+		Аргументы: StrContains(str, subStr, ignoreCase) 
+		str   - строка, в которой ищут (String).
+		subStr   - подстрока, которую ищут (String).
+		ignoreCase   - не учитывать регистр (Bool). Не обязательный аргумент.
+		Результат: Bool"
+	}
+
+	"StrEnds_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "StrEnds_SPXML",
+		"body": [
+			"StrEnds($1, $2);"
+		],
+		"Проверяет, оканчивается ли строка на другую строку.  StrEnds(str, subStr, ignoreCase) 
+		Аргументы:
+		str   - строка, в которой ищут (String).
+		subStr   - подстрока, которую ищут (String).
+		ignoreCase   - не учитывать регистр (Bool). Не обязательный аргумент. Результат: Bool"
+	}
+
+	"StrIsAlphaNum_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "StrIsAlphaNum_SPXML",
+		"body": [
+			"StrIsAlphaNum($1);"
+		],
+		"Проверяет состоит ли строка только из цифр или латинских символов.
+		Аргументы: str   - проверяемая строка (String).
+		Результат: Bool"
+	}
+
+	"StrLeftRange_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "StrLeftRange_SPXML",
+		"body": [
+			"StrLeftRange($1);"
+		],
+		"Возвращает часть строки str, длиной length, начиная с первого символа переданной строки.
+		Если второй аргумент больше длины передаваемой строки, возвращается str. StrLeftRange(str, length)
+		Аргументы:
+		str   - строка (String).
+		length   - длина строки (Integer).
+		Результат: String"
+	}
+
+	"StrLen_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "StrLen_SPXML",
+		"body": [
+			"StrLen($1);"
+		],
+		"Возвращает длину строки в байтах.
+		Данная длина может быть больше количества символов, если приложение использует кодировку UTF-8. Результат: Integer"
+	}	
+
+	"StrLowerCase_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "StrLowerCase_SPXML",
+		"body": [
+			"StrLowerCase($1);"
+		],
+		"Переводит все символы строки в нижний регистр.
+		Аргументы: str   - строка, которую необходимо преобразовать (String).
+		Результат: String"
+	}
+
+	"EnableLogExt_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "EnableLogExt_SPXML",
+		"body": [
+			"EnableLogExt(\"$1\", \"life-time=month\")"
+			"LogEvent(\"$2\", \"***************************************************** НАЧАЛО РАБОТЫ ***************************************************** \" + Date());"
+		],
+		"description": "Пишем в свой личный лог"
+	}
+
+	"LogEvent_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "LogEvent_SPXML",
+		"body": [
+			"LogEvent(\"$1\", \"$2\");"
+		],
+		"description": "Вывод в EnableLogExt"
+	}
+
+	"XQuery_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "XQuery_SPXML",
+		"body": [
+			"XQuery(\"for \\$elem in $1 where $elem/$2='$3' return \\$elem\");"
+		],
+		"description": "Простой XQuery-запрос"
+	}
+
+	"<%%>_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "<%%>_SPXML",
+		"body": [
+			"<%=$1%>"
+		],
+		"description": "Скобочки"
+	}
+
+}
