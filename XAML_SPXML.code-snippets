@@ -226,18 +226,7 @@
 		],
 		"description": "Селектор-радиокнопка"
 	}
-
-	"Toolbar_XAML": {
-		"scope": "javascript,xml",
-		"prefix": "Toolbar_XAML",
-		"body": [
-			"<Toolbar Width=\"100%\">
-				"\t$1"			
-			"</Toolbar>"
-		],
-		"description": "Панель с кнопочками. Содержать может: кнопки, расхлопывающиеся списки"
-	}
-
+	
 	"SPXMLScreen_XAML": {
 		"scope": "javascript,xml",
 		"prefix": "SPXMLScreen_XAML",
@@ -261,7 +250,16 @@
 		"
 	}
 
-	
+	"Toolbar_XAML": {
+		"scope": "javascript,xml",
+		"prefix": "Toolbar_XAML",
+		"body": [
+			"<Toolbar Width=\"100%\">
+				"\t$1"			
+			"</Toolbar>"
+		],
+		"description": "Панель с кнопочками. Содержать может: кнопки, расхлопывающиеся списки"
+	}
 
 
 // ********************************************************* НАЧАЛО СНИППЕТОВ SPXML *********************************************************
@@ -680,8 +678,12 @@
 		"scope": "javascript,xml",
 		"prefix": "EnableLogExt_SPXML",
 		"body": [
-			"EnableLogExt(\"$1\", \"life-time=month\")"
-			"LogEvent(\"$2\", \"***************************************************** НАЧАЛО РАБОТЫ ***************************************************** \" + Date());"
+			"EnableLogExt(\"$1\", \"life-time=month\")"			
+			"function Log(sMsg)"
+			"{"
+				"\tLogEvent(\"$3\", sMsg);"
+			"}"
+			"Log(\"$2\", \"***************************************************** НАЧАЛО РАБОТЫ ***************************************************** \" + Date());"
 		],
 		"description": "Пишем в свой личный лог"
 	}
@@ -695,11 +697,36 @@
 		"description": "Вывод в EnableLogExt"
 	}
 
+	"Log_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "Log_SPXML",
+		"body": [
+			"Log(\"$1\", \"$2\");"
+		],
+		"description": "Вывод в EnableLogExt при помощи функции Log()" 
+	}
+
 	"XQuery_SPXML": {
 		"scope": "javascript,xml",
 		"prefix": "XQuery_SPXML",
 		"body": [
 			"XQuery(\"for \\$elem in $1 where $elem/$2='$3' return \\$elem\");"
+		],
+		"description": "Простой XQuery-запрос"
+	}
+
+	"TryCatch_SPXML": {
+		"scope": "javascript,xml",
+		"prefix": "TryCatch_SPXML",
+		"body": [
+			"try"
+			"{"
+				"\t"
+			"}"
+			catch(e)
+			"{"
+				"\tLog(\"$1\", e);"
+			"}"
 		],
 		"description": "Простой XQuery-запрос"
 	}
@@ -712,5 +739,7 @@
 		],
 		"description": "Скобочки"
 	}
+
+
 
 }
