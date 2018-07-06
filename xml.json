@@ -234,7 +234,24 @@
 		],
 		"description": "Контейнер. NB: Горизонтальная ориентация будет стараться ужать содержимое до минимальной ширины. Если у дочернего элемента ширина не указана/указана в процентах, контейнер сожмет её максимально узко
 		"
-	}	
+	}
+
+	"EnableLogExt_SPXML": {
+		"prefix": "EnableLogExt_SPXML",
+		"body": [
+			"EnableLogExt(\"$1\", \"life-time=month\")"
+			"LogEvent(\"$2\", \"***************************************************** НАЧАЛО РАБОТЫ ***************************************************** \" + Date());"
+		],
+		"description": "Пишем в свой личный лог"
+	}
+
+	"LogEvent_SPXML": {
+		"prefix": "LogEvent_SPXML",
+		"body": [
+			"LogEvent(\"$1\", \"$2\");"
+		],
+		"description": "Вывод в EnableLogExt"
+	}
 
 	"XQuery_SPXML": {
 		"prefix": "XQuery_SPXML",
@@ -244,7 +261,13 @@
 		"description": "Простой XQuery-запрос"
 	}
 
-
+	"<%%>_SPXML": {
+		"prefix": "<%%>_SPXML",
+		"body": [
+			"<%=$1%>"
+		],
+		"description": "Скобочки"
+	}
 
 	
 
