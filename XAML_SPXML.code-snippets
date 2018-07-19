@@ -1,7 +1,7 @@
 {
 	// ********************************************************* НАЧАЛО СНИППЕТОВ XAML *********************************************************
 	"Action_XAML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "Action_XAML",
 		"body": [
 			"<Action Name=\"$1\" Source=\"$2\" Success=\"$3\" Failure=\"$4\">"
@@ -13,7 +13,7 @@
 	}
 
 	"Button_XAML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "Button_XAML",
 		"body": [
 			"<Button Click=\"$1\" Width=\"100%\" Enabled=\"${2|True,False|}\">$3</Button>"
@@ -22,7 +22,7 @@
 	}
 
 	"Calendar_XAML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "Calendar_XAML",
 		"body": [
 			"<Calendar Name=\"$1\" Source=\"$2\" Width=\"100\" Height=\"100\" Modes=\"${3|Day,Week,Month,Monthcategory,Category|}\" SelectedView=\"${4|Day,Week,Month,Monthcategory,Category|}\"/>
@@ -31,7 +31,7 @@
 	}
 
 	"CheckBox_XAML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "CheckBox_XAML",
 		"body": [
 			"<CheckBox Name=\"$1\" Value=\"$2\" Checked=\"${3|True,False|}\" Enabled=\"${4|True,False|}\">$5</CheckBox>"
@@ -40,7 +40,7 @@
 	}
 
 	"Collection_XAML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "Collection_XAML",
 		"body": [
 			"<Collection Name=\"$1\" Source=\"$2\">"
@@ -52,7 +52,7 @@
 	}
 
 	"ComboBox_XAML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "ComboBox_XAML",
 		"body": [
 			"<ComboBox Name=\"$1\" Width=\"100%\" Enabled=\"${2|True,False|}\">"
@@ -63,7 +63,7 @@
 	}
 
 	"ComboBoxItem_XAML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "ComboBoxItem_XAML",
 		"body": [
 			"<ComboBoxItem Value=\"$1\">$2</ComboBoxItem>"
@@ -72,7 +72,7 @@
 	}
 
 	"Data_XAML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "Data_XAML",
 		"body": [
 			"<Data>"
@@ -89,7 +89,7 @@
 	}
 
 	"DataGrid_XAML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "DataGrid_XAML",
 		"body": [
 			"<DataGrid Name=\"$1\" Title=\"$2\" Source=\"$3\" Width=\"200\" Height=\"200\" Selection=\"${4|single,multiple,none|s}\" Hidden=\"${5|False,True|}\">"
@@ -100,7 +100,7 @@
 	}
 
 	"DataGridColumn_XAML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "DataGridColumn_XAML",
 		"body": [
 			"<DataGridColumn Title=\"$1\" Value=\"$2\" Type=\"$3\" Width=\"100%\" Hidden=\"${4|False,True|}\"/>"
@@ -109,7 +109,7 @@
 	}
 
 	"DatePicker_XAML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "DatePicker_XAML",
 		"body": [
 			"<DatePicker Name=\"$1\" Width=\"100%\" Enabled=\"${2|True,False|}\">$4</DatePicker>"
@@ -119,7 +119,7 @@
 
 	
 	"Dialog_XAML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "Dialog_XAML",
 		"body": [
 			"<Dialog Name=\"$1\" Title=\"$2\" Width=\"100%\" Height=\"50\" Source=\"$3\" Close=\"$4\">"
@@ -130,7 +130,7 @@
 	}
 
 	"Edit_XAML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "Edit_XAML",
 		"body": [
 			"<Edit Name=\"$1\" Width=\"100%\" Enabled=\"${2|True,False|}\" Hidden=\"${3|False,True|}\">$4</Edit>"
@@ -139,7 +139,7 @@
 	}
 
 	"EditBox_XAML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "EditBox_XAML",
 		"body": [
 			"<EditBox Name=\"$1\" Width=\"100%\" Height=\"50\" Enabled=\"${2|True,False|}\">"
@@ -150,7 +150,7 @@
 	}
 	
 	"Grid_XAML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "Grid_XAML",
 		"body": [
 			"<Grid Width=\"100%\" Hidden=\"${1|False,True|}\">"
@@ -172,7 +172,7 @@
 	}
 
 	"Image_XAML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "Image_XAML",
 		"body": [
 			"<Image Source=\"$1\" Width=\"100%\" Height=\"50\" Class=\"$2\" Click=\"$3\">"
@@ -181,7 +181,7 @@
 	}
 
 	"Label_XAML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "Label_XAML",
 		"body": [
 			"<Label>$1</Label>"
@@ -190,7 +190,7 @@
 	}
 
 	"Link_XAML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "Link_XAML",
 		"body": [
 			"<Link Click=\"$1\">$2</Link>"
@@ -199,7 +199,7 @@
 	}
 
 	"Panel_XAML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "Panel_XAML",
 		"body": [
 			"<Panel Name=\"$1\" Title=\"$2\" Source=\"$3\" Hidden=\"${4|False,True|}\">"
@@ -210,7 +210,7 @@
 	}
 
 	"Param_XAML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "Param_XAML",
 		"body": [
 			"<Param Name=\"$1\" Value=\"$2\"/>"
@@ -219,7 +219,7 @@
 	}
 
 	"RadioButton_XAML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "RadioButton_XAML",
 		"body": [
 			"<RadioButton Name=\"$1\" Value=\"$2\" Checked=\"${3|False,True|}\"/>$4</RadioButton>"
@@ -228,7 +228,7 @@
 	}
 	
 	"SPXMLScreen_XAML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "SPXMLScreen_XAML",
 		"body": [
 			"<SPXMLScreen Name=\"$1\" Title=\"$2\" Width=\"100%\" Height=\"100%\" Maximized=\"${3|False,True|}\">"
@@ -239,7 +239,7 @@
 	}
 
 	"StackPanel_XAML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "StackPanel_XAML",
 		"body": [
 			"<StackPanel Name=\"$1\" Width=\"100%\" Height=\"50\" Hidden=\"${2|False,True|}\" Align=\"${3|left,center,right|}\" Orientation=\"${4|Horizontal,Vertical|}\">"
@@ -251,7 +251,7 @@
 	}
 
 	"Toolbar_XAML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "Toolbar_XAML",
 		"body": [
 			"<Toolbar Width=\"100%\">
@@ -265,25 +265,25 @@
 // ********************************************************* НАЧАЛО СНИППЕТОВ SPXML *********************************************************
 
 	"ArrayOptFirstElem_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "ArrayOptFirstElem_SPXML",
 		"body": [
-			"ArrayOptFirstElem(XQuery(\"$1\"));"
+			"ArrayOptFirstElem(XQuery(\"$1\"))"
 		],
 		"description": "Возвращает первый элемента массива"
 	}
 
 	"ArrayCount_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "ArrayCount_SPXML",
 		"body": [
-			"ArrayCount($1);"
+			"ArrayCount($1)"
 		],
 		"description": "Возвращает число элементов массива"
 	}
 
 	"OpenDoc_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "OpenDoc_SPXML",
 		"body": [
 			"OpenDoc(UrlFromDocID($1));"
@@ -295,19 +295,19 @@
 
 
 	"ArrayMerge_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "ArrayMerge_SPXML",
 		"body": [
-			"ArrayMerge($1, $2, $3);"
+			"ArrayMerge($1, $2, $3)"
 		],
 		"description": "Возвращает строку, полученную путем склеивания данных из элементов массива"
 	}
 
 	"ArrayOptFindByKey_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "ArrayOptFindByKey_SPXML",
 		"body": [
-			"ArrayOptFindByKey($1, $2);"
+			"ArrayOptFindByKey($1, $2)"
 		],
 		"description": "Ищет первый элемент массива с заданным значением определнного поля (ключа). Если такой элемент не найден, возвращается undefined.
 		array - массив
@@ -316,47 +316,47 @@
 	}
 	
 	"ArraySelect_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "ArraySelect_SPXML",
 		"body": [
-			"ArraySelect($1, $2);"
+			"ArraySelect($1, $2)"
 		],
 		"description": "Выбирает элементы массива, удовлетворяющие заданному критерию."
 	}
 
 	"ArraySelectAll_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "ArraySelectAll_SPXML",
 		"body": [
-			"ArraySelect($1);"
+			"ArraySelect($1)"
 		],
 		"description": "Возвращает массив, содержащий все элементы исходного массива в виде стандартного массива Array"
 	}
 
 	"ArraySelectByKey_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "ArraySelectByKey_SPXML",
 		"body": [
-			"ArraySelectByKey($1, $2, $3);"
+			"ArraySelectByKey($1, $2, $3)"
 		],
 		"description": "Выбирает элементы массива, с определенным значением заданного поля (ключа) внутри элемента.
 		Функция аналогична более универсальной функции ArraySelect(), но работает быстрее."
 	}
 
 	"ArraySelectDistinct_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "ArraySelectDistinct_SPXML",
 		"body": [
-			"ArraySelectDistinct($1, $2);"
+			"ArraySelectDistinct($1, $2)"
 		],
 		"description": "Возвращает массив уникальных значений элементов заданного массива."
 	}
 
 	"ArraySort_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "ArraySort_SPXML",
 		"body": [
-			"ArraySort($1, $2);"
+			"ArraySort($1, $2)"
 		],
 		"description": "Сортирует массив по заданным полям. Возвращает новый массив отсортированных значений. 
 		Функция требует нечетного чилса аргументов (не менее 3-х), для каждого нового уровня сортировки добаляется 2 новых аргумента.
@@ -368,28 +368,28 @@
 	}
 
 	"ArrayUnion_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "ArrayUnion_SPXML",
 		"body": [
-			"ArrayUnion($1, $2);"
+			"ArrayUnion($1, $2)"
 		],
 		"description": "Последовательное объединение нескольких массивов в один."
 	}
 
 	"IsArray_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "IsArray_SPXML",
 		"body": [
-			"IsArray($1);"
+			"IsArray($1)"
 		],
 		"description": "Проверяет, является ли аргумент массивом. Результат bool"
 	}
 
 	"ArrayRange_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "ArrayRange_SPXML",
 		"body": [
-			"ArrayRange($1, $2, $3);"
+			"ArrayRange($1, $2, $3)"
 		],
 		"description": "Возвращает фрагмент массива с определенной позиции.
 		array   - исходный массив
@@ -398,10 +398,10 @@
 	}
 
 	"Date_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "Date_SPXML",
 		"body": [
-			"Date($1);"
+			"Date($1)"
 		],
 		"Конструктор стандартного объекта JavaScript Date
 		date   - начальное значение даты (Date) либо строка, содержащее дату (String). 
@@ -409,19 +409,19 @@
 	}
 
 	"DateDiff_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "DateDiff_SPXML",
 		"body": [
-			"DateDiff($1, $2);"
+			"DateDiff($1, $2)"
 		],
 		"Возвращает разницу между 2-мя датами в секундах. Если первая дата меньше второй, разница будет отрицательным числом."
 	}
 
 	"DateOffset_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "DateOffset_SPXML",
 		"body": [
-			"DateOffset($1, $2);"
+			"DateOffset($1, $2)"
 		],
 		"Сдвигает дату на указанное число секунд. Если значение второго аргумента отрицательное, дата сдвигается назад.
 		date   - заданная дата (Date).
@@ -429,46 +429,46 @@
 	}
 
 	"Day_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "Day_SPXML",
 		"body": [
-			"Day($1);"
+			"Day($1)"
 		],
 		" Возвращает значение дня (1-31) для заданной даты. - integer"
 	}
 	
 	"Hour_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "Hour_SPXML",
 		"body": [
-			"Hour($1);"
+			"Hour($1)"
 		],
 		"Возвращает значение часа для заданной даты - Integer. Если дата не содержит времени, возращается undefined."
 	}
 
 	"Minute_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "Minute_SPXML",
 		"body": [
-			"Minute($1);"
+			"Minute($1)"
 		],
 		"Возвращает значение минуты для заданной даты - Integer. Если дата не содержит времени, возращается undefined."
 	}
 
 	"Month_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "Month_SPXML",
 		"body": [
-			"Month($1);"
+			"Month($1)"
 		],
 		"Возвращает номер месяца (1-12) для заданной даты - Integer"
 	}
 
 	"ParseDate_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "ParseDate_SPXML",
 		"body": [
-			"ParseDate($1);"
+			"ParseDate($1)"
 		],
 		"Преобразует строку с датой в большинсве изветных форматов в дату.
 		В отличие от функции Date() понимает дату со словесным указанием месяца, например '1 ноября 2011 года' Результат: Date
@@ -477,19 +477,19 @@
 	}
 
 	"Second_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "Second_SPXML",
 		"body": [
-			"Second($1);"
+			"Second($1)"
 		],
 		"Возвращает значение секунд для заданной даты. Если дата не содержит значения секунд, возращается undefined."
 	}
 
 	"StrDate_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "StrDate_SPXML",
 		"body": [
-			"StrDate($1, $2);"
+			"StrDate($1, $2)"
 		],
 		"Преобразует дату в строку в формате, используемом по умолчанию в операционной системе.
 		Если в качестве аргумента передается null или пустая строка, функция возвращает пустую строку.
@@ -500,10 +500,10 @@
 	}
 
 	"StrLongDate_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "StrLongDate_SPXML",
 		"body": [
-			"StrLongDate($1);"
+			"StrLongDate($1)"
 		],
 		"Преобразует дату в строку в "длинном" формате (со словесным написанием месяца).
 		Если в качестве аргумента передается null или пустая строка, функция возвращает пустую строку
@@ -513,7 +513,7 @@
 	"StrShortDate_SPXML": {
 		"prefix": "StrShortDate_SPXML",
 		"body": [
-			"StrShortDate($1);"
+			"StrShortDate($1)"
 		],
 		"Преобразует дату в строку, с двухсимвольным форматом года.Результат: String"
 	}
@@ -521,17 +521,17 @@
 	"StrMimeDate_SPXML": {
 		"prefix": "StrMimeDate_SPXML",
 		"body": [
-			"StrMimeDate($1);"
+			"StrMimeDate($1)"
 		],
 		"Пребразует дату в формат MIME. StrMimeDate( Date( '26.12.2011 10:45' ) ) вернет 'Mon, 26 Dec 2011 10:45:00 +0400' Результат: Date"
 	}
 
 	
 	"StrTime_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "StrTime_SPXML",
 		"body": [
-			"StrTime($1);"
+			"StrTime($1)"
 		],
 		"Преобразует значение времени внутри даты в строку.
 		Если время не содержится внутри даты, возвращается пустая строка.Результат: String	
@@ -539,10 +539,10 @@
 	}
 
 	"StrXmlDate_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "StrXmlDate_SPXML",
 		"body": [
-			"StrXmlDate($1, $2);"
+			"StrXmlDate($1, $2)"
 		],
 		"Преобразует дату в строку в формате, используемом в XML. Данный формат не зависит от региональных настроек в системе. 
 		Аргументы:
@@ -552,37 +552,37 @@
 	}	
 
 	"UtcToLocalDate_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "UtcToLocalDate_SPXML",
 		"body": [
-			"UtcToLocalDate($1);"
+			"UtcToLocalDate($1)"
 		],
 		"Преобразует дату из универсального часового пояса в текущий часовой пояс. Результат: Date"
 	}
 
 	"WeekDay_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "WeekDay_SPXML",
 		"body": [
-			"WeekDay($1);"
+			"WeekDay($1)"
 		],
 		"Возвращает номер дня недели для заданной даты. (0 - Воскресенье, 1 - Понедельник и т.д.) Результат: integer"
 	}
 
 	"Year_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "Year_SPXML",
 		"body": [
-			"Year($1);"
+			"Year($1)"
 		],
 		"Возвращает значение года для заданной даты. Результат: integer"
 	}
 
 	"StrBegins_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "StrBegins_SPXML",
 		"body": [
-			"StrBegins($1, $2);"
+			"StrBegins($1, $2)"
 		],
 		"Проверяет, начинается ли строка на другую строку. StrBegins(str, subStr, ignoreCase)
 		Аргументы:
@@ -593,19 +593,19 @@
 	}
 
 	"StrCharCount_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "StrCharCount_SPXML",
 		"body": [
-			"StrCharCount($1);"
+			"StrCharCount($1)"
 		],
 		"ВВозвращает количество символов в строке. Результат: integer"
 	}
 
 	"StrContains_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "StrContains_SPXML",
 		"body": [
-			"StrContains($1);"
+			"StrContains($1)"
 		],
 		"Проверяет, содержит ли строка другую строку в качестве подстроки.
 		Аргументы: StrContains(str, subStr, ignoreCase) 
@@ -616,10 +616,10 @@
 	}
 
 	"StrEnds_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "StrEnds_SPXML",
 		"body": [
-			"StrEnds($1, $2);"
+			"StrEnds($1, $2)"
 		],
 		"Проверяет, оканчивается ли строка на другую строку.  StrEnds(str, subStr, ignoreCase) 
 		Аргументы:
@@ -629,10 +629,10 @@
 	}
 
 	"StrIsAlphaNum_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "StrIsAlphaNum_SPXML",
 		"body": [
-			"StrIsAlphaNum($1);"
+			"StrIsAlphaNum($1)"
 		],
 		"Проверяет состоит ли строка только из цифр или латинских символов.
 		Аргументы: str   - проверяемая строка (String).
@@ -640,10 +640,10 @@
 	}
 
 	"StrLeftRange_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "StrLeftRange_SPXML",
 		"body": [
-			"StrLeftRange($1);"
+			"StrLeftRange($1)"
 		],
 		"Возвращает часть строки str, длиной length, начиная с первого символа переданной строки.
 		Если второй аргумент больше длины передаваемой строки, возвращается str. StrLeftRange(str, length)
@@ -654,20 +654,20 @@
 	}
 
 	"StrLen_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "StrLen_SPXML",
 		"body": [
-			"StrLen($1);"
+			"StrLen($1)"
 		],
 		"Возвращает длину строки в байтах.
 		Данная длина может быть больше количества символов, если приложение использует кодировку UTF-8. Результат: Integer"
 	}	
 
 	"StrLowerCase_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "StrLowerCase_SPXML",
 		"body": [
-			"StrLowerCase($1);"
+			"StrLowerCase($1)"
 		],
 		"Переводит все символы строки в нижний регистр.
 		Аргументы: str   - строка, которую необходимо преобразовать (String).
@@ -675,7 +675,7 @@
 	}
 
 	"EnableLogExt_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "EnableLogExt_SPXML",
 		"body": [
 			"EnableLogExt(\"$1\", \"life-time=month\")"			
@@ -683,13 +683,13 @@
 			"{"
 				"\tLogEvent(\"$3\", sMsg);"
 			"}"
-			"Log(\"$2\", \"***************************************************** НАЧАЛО РАБОТЫ ***************************************************** \" + Date());"
+			"Log(\"***************************************************** НАЧАЛО РАБОТЫ ***************************************************** \" + Date());"
 		],
 		"description": "Пишем в свой личный лог"
 	}
 
 	"LogEvent_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "LogEvent_SPXML",
 		"body": [
 			"LogEvent(\"$1\", \"$2\");"
@@ -698,25 +698,25 @@
 	}
 
 	"Log_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "Log_SPXML",
 		"body": [
-			"Log(\"$1\", \"$2\");"
+			"Log(\"$1\");"
 		],
 		"description": "Вывод в EnableLogExt при помощи функции Log()" 
 	}
 
 	"XQuery_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "XQuery_SPXML",
 		"body": [
-			"XQuery(\"for \\$elem in $1 where $elem/$2='$3' return \\$elem\");"
+			"XQuery(\"for \\$elem in $1 where \\$elem/$2='$3' return \\$elem\");"
 		],
 		"description": "Простой XQuery-запрос"
 	}
 
 	"TryCatch_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "TryCatch_SPXML",
 		"body": [
 			"try"
@@ -732,10 +732,10 @@
 	}
 
 	"<%%>_SPXML": {
-		"scope": "javascript,xml",
+		"scope": "javascript,xml,brightscript",
 		"prefix": "<%%>_SPXML",
 		"body": [
-			"<%=$1%>"
+			"<%$1%>"
 		],
 		"description": "Скобочки"
 	}
