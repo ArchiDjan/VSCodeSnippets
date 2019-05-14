@@ -782,7 +782,7 @@
 		"scope": "javascript,xml,html,brightscript",
 		"prefix": "XQuery_SPXML",
 		"body": [
-			"XQuery(\"for \\$elem in ${1|active_learnings,career_reserves,collaborators,compound_programs,education_plans,forums,forum_entrys,groups,group_collaborators,learning_task_results,poll_results,statistic_recs,statistic_datas,subdivisions,subs,subscriptions,qualifications|} where \\$elem/$2 = \" + $3 + \" return \\$elem/Fields('id')\");"
+			"XQuery(\"for \\$elem in ${1|accounts,acquaint_assigns,acquaints,action_reports,active_learnings,active_notifications,active_test_learnings,active_web_templates,activity_states,activitys,articles,assessment_appraise_matrixs,assessment_appraises,assessment_plans,assessment_result_recommends,assessments,availability_plans,banners,baskets,benefit_items,benefits,blog_entry_comments,blog_entrys,blogs,bonus_items,bonus_profiles,books,boss_types,budget_periods,budget_types,budgets,candidate_sources,candidate_status_types,career_reserve_types,career_reserves,cc_courses,cc_exthd_agreements,cc_exthd_slas,cc_exthd_work_types,cc_solutions,cc_tt_time_entrys,certificate_types,certificates,changes,chatbot_chats,chatbot_stages,chatbot_types,chatbots,chats,cl_consts,cl_courses,cl_localizations,cl_modules,cl_objects,cl_shapes,cl_slides,codings,collaborators,committee_members,competence_blocks,competence_profile_familys,competence_profiles,competences,component_packages,compound_programs,connections,contact_results,contact_types,contacts,contests,contract_types,contracts,cost_centers,course_modules,courses,covenants,custom_admin_templates,custom_chatbot_templates,custom_reports,custom_web_template_groups,custom_web_templates,development_methods,development_plans,development_potentials,device_regs,digital_signatures,dimensions,discharges,dn_academ_debts,dn_academ_years,dn_auditoriums,dn_block_disciplines,dn_control_events,dn_control_forms,dn_disciplines,dn_edu_conditions,dn_educat_events,dn_educat_forms,dn_ind_educat_plans,dn_lessons,dn_prog_disc_appends,dn_program_discipls,dn_registers,dn_schedules,dn_specializations,dn_specials,dn_streams,dn_stud_centrtest_results,dn_stud_groups,dn_students,dn_subject_plans,dn_terms,dn_train_method_complexs,dn_work_curriculums,doc_types,document_comment_entrys,documents,download_packages,education_methods,education_orgs,education_plans,education_programs,efficiency_estimations,estaff_event_types,estaff_events,event_assessment_plans,event_result_types,event_results,event_types,events,exchange_servers,exclusion_reasons,exercises,expense_items,expenses,expert_questions,experts,external_systems,file_sources,forum_entrys,forum_theme_read_by_collaborators,forums,good_instances,good_types,goods,grades,groups,hosts,indicators,invoices,items,key_position_threats,key_positions,knowledge_classifiers,knowledge_part_levels,knowledge_part_types,knowledge_parts,knowledge_profiles,kpi_profiles,kpi_values,kpis,learning_parts,learning_records,learning_storages,learning_task_results,learning_tasks,learnings,lectors,levels,library_material_comments,library_material_formats,library_material_items,library_material_source_types,library_material_types,library_material_viewings,library_materials,library_players,library_sections,library_systems,licenses,likes,messenger_services,mobile_app_configs,notification_systems,notification_templates,notifications,object_data_types,object_datas,object_resources,object_versions,objective_translates,operations,order_types,orders,org_vendor_states,orgs,outstaff_additional_works,outstaff_contracts,outstaff_order_executions,outstaff_orders,outstaff_providers,outstaff_type_materials,override_web_templates,participants,pas,pay_phases,pay_stages,payment_types,payments,person_object_links,person_object_profiles,personnel_committees,personnel_reserves,places,plugins,poll_procedures,poll_results,polls,position_assessment_forms,position_common_instructions,position_commons,position_familys,position_levels,positions,print_forms,proctoring_systems,professional_areas,profiles,profiling_records,project_participants,projects,providers,pryces,qualification_assignments,qualifications,ratings,readiness_levels,recommendations,recruitment_methods,recruitment_plans,regions,remote_actions,remote_collections,remote_security_profiles,repositoriums,reprimand_types,reprimands,request_types,requests,resource_types,resources,response_types,responses,resumes,risk_levels,risk_perspectives,roles,salary_survey_sources,salary_surveys,sale_contracts,sale_statuss,sales,script_queue_elems,section_instructions,selected_resumes,selected_vacancys,server_agents,sites,skills,statements,statistic_datas,statistic_recs,subdivision_groups,subdivisions,submission_types,submissions,subscriptions,substitution_types,substitutions,successors,supplementary_questions,system_events,tags,talent_pool_nominations,task_types,tasks,tenancys,test_learnings,test_projects,testing_systems,training_plans,traning_orders,transactions,tutors,typical_development_programs,upload_packages,user_assignments,user_datas,vacancy_responses,vacancy_sources,vacancy_subscriptions,vacancy_types,vacancys,vendor_states,verbs,walkthroughs,web_designs,web_rules,webinar_systems,wiki_article_communication_types,wiki_article_communications,wiki_article_types,wiki_articles,wiki_bases,work_schedules,workflows|} where \\$elem/$2 = \" + $3 + \" return \\$elem/Fields('id')\");"
 		],
 		"description": "Простой XQuery-запрос"
 	}
@@ -797,7 +797,7 @@
 			"}"
 			"catch(e)"
 			"{"
-				"\tLog(e);"
+				"\talert(e);"
 			"}"
 		],
 		"description": "Конструкция try..catch"
@@ -969,6 +969,46 @@
 			"tools.active_learning_finish($1)"
 		],
 		"description": "Функция завершает указанный активный электронный курс и создает карточку завершенного электронного курса."
+	}
+
+	// MOBILE SNIPPETS
+
+	"mobTemplate": {
+		"scope": "javascript,xml,html,brightscript",
+		"prefix": "mobTemplate",
+		"body": [
+			"var oEntry = {};"
+			"RESULT     = [];"
+			""
+			"for (_$1 in $2)"
+			"{"
+				"\toEntry = {};"
+				"\t"
+				"\t"
+				"\t"
+				"\tRESULT.push(oEntry);"
+			"}"
+			""
+			"COLUMNS = (["
+				"\t{\"data\":\"\", \"type\":\"string\", ${3|\"listview\":true,\"detailview\":true|}, \"class\":\"\"},"
+				"\t{\"data\":\"\", \"type\":\"image\", ${3|\"listview\":true,\"detailview\":true|}, \"class\":\"\"},"
+			"]);"
+
+		],
+		"description": "COLUMNS"
+	}
+
+	"mobColumns": {
+		"scope": "javascript,xml,html,brightscript",
+		"prefix": "mobColumns",
+		"body": [
+			"COLUMNS = (["
+				"\t{\"data\":\"\", \"type\":\"string\", ${1|\"listview\":true,\"detailview\":true|}, \"class\":\"\"},"
+				"\t{\"data\":\"\", \"type\":\"image\", ${1|\"listview\":true,\"detailview\":true|}, \"class\":\"\"},"
+			"]);"
+
+		],
+		"description": "COLUMNS"
 	}
 
 }
