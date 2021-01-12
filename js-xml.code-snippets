@@ -1,0 +1,150 @@
+{
+    "tools.get_mode_clean_url": {
+        "prefix": "tools.get_mode_clean_url",
+        "body": [
+            "tools.get_mode_clean_url( $1, $2 )",
+        ],
+        "description": ""
+    },
+ 
+    "tools.object_to_text": {
+        "prefix": "tools.object_to_text",
+        "body": [
+            "tools.object_to_text( $1, 'xml' )",
+        ],
+        "description": ""
+    },
+ 
+    "tools.read_object": {
+        "prefix": "tools.read_object",
+        "body": [
+            "tools.read_object( $1, 'json' )",
+        ],
+        "description": ""
+    },
+ 
+    "tools.open_doc": {
+        "prefix": "tools.open_doc",
+        "body": [
+            "d$1 = tools.open_doc( $2 )",
+            "if ( d$1 != undefined )",
+            "{",
+            "    te$1 = d$1.TopElem;",
+            "}"
+        ],
+        "description": ""
+    },
+ 
+    "tools_web.is_true": {
+        "prefix": "tools_web.is_true",
+        "body": [
+            "tools_web.is_true( $1 )"
+        ],
+        "description": ""
+    },
+ 
+    "tools_web.get_web_param": {
+        "prefix": "tools_web.get_web_param",
+        "body": [
+            "tools_web.get_web_param( curParams, '$1', '', true )"
+        ],
+        "description": ""
+    },
+    
+    "tools_web.get_web_const": {
+        "prefix": "tools_web.get_web_const",
+        "body": [
+            "tools_web.get_web_const( '$1', curLngWeb )"
+        ],
+        "description": ""
+    },
+ 
+    "HtmlEncode": {
+        "prefix": "HtmlEncode-xaml",
+        "body": [
+            "HtmlEncode( $1 )"
+        ],
+        "description": ""
+    },
+ 
+    "StrLowerCase": {
+        "prefix": "StrLowerCase-spxml",
+        "body": [
+            "StrLowerCase( $1 )"
+        ],
+        "description": ""
+    },
+ 
+    "StrTitleCase": {
+        "prefix": "StrTitleCase-spxml",
+        "body": [
+            "StrTitleCase( $1 )"
+        ],
+        "description": ""
+    },
+ 
+    "ArrayOptFirstElem": {
+        "prefix": "ArrayOptFirstElem-spxml",
+        "body": [
+            "ArrayOptFirstElem( $1 )"
+        ],
+        "description": ""
+    },
+    
+    "XQueryLiteral": {
+        "prefix": "XQueryLiteral-spxml",
+        "body": [
+            "XQueryLiteral( $1 )"
+        ],
+        "description": ""
+    },
+ 
+    "UrlEncode": {
+        "prefix": "UrlEncode-spxml",
+        "body": [
+            "UrlEncode( $1 )"
+        ],
+        "description": ""
+    },
+    
+    "EnableLogExt": {
+        "prefix": "EnableLogExt-spxml",
+        "body": [
+            "EnableLogExt( \"$1\", \"life-time=day\" );",
+            "",
+            "function Log( sMsg )",
+            "{",
+            "    LogEvent( \"$1\", sMsg );",
+            "}",
+        ],
+        "description": ""
+    },
+ 
+    "CodeLiteral": {
+        "prefix": "CodeLiteral-spxml",
+        "body": [
+            "CodeLiteral( $1 );"
+        ],
+        "description": ""
+    },
+ 
+    "UrlAppendPath": {
+        "prefix": "UrlAppendPath-spxml",
+        "body": [
+            "UrlAppendPath( $1, $2 );"
+        ],
+        "description": ""
+    },
+ 
+    "alert": {
+        "prefix": "alert-agent",
+        "body": [
+            "alert( \"ЗАПУЩЕН - $1...\" );",
+            "",
+            "$2",
+            "",
+            "alert( \"ЗАВЕРШЕН - $1.\" );"
+        ],
+        "description": ""
+    },
+}
